@@ -37,6 +37,16 @@ function main(kernelFn, bPlot, numTraining, resizeVal)
         bPlot = false;
     end
 
+    if ~exist('tmp', 'dir')
+        mkdir('tmp');
+    end
+    if ~exist('tmp/yes', 'dir')
+        mkdir('tmp/yes')
+    end
+    if ~exist('tmp/no', 'dir')
+        mkdir('tmp/no')
+    end
+
     tic
     %% get the data information stuct
     dataSet = getDataSetStruct();
